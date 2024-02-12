@@ -9,13 +9,13 @@
                 Description: {{time.description}}
             </div>
             <div>
-                Begin Date: {{time.begin_date}}
+                Begin Date: {{formatDate(time.begin_date)}}
             </div>
             <div>
-                End date: {{time.end_date}}
+                End date: {{formatDate(time.end_date)}}
             </div>
             <div>
-                Spend time: {{time2Decimals(time.spent_time)}}
+                Spend time: {{timeFormatted(time.spent_time)}}
             </div>
         </div>
       </div>

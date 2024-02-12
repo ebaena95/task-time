@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { TaskService } from '../../services/task.service';
 import { Task } from '../../interfaces/task';
 import { take } from 'rxjs';
+import { TimerComponent } from './timer/timer.component';
 
 @Component({
   selector: 'app-task-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TimerComponent],
   templateUrl: './task-list.component.html',
   styleUrl: './task-list.component.scss'
 })
@@ -29,7 +30,7 @@ export class TaskListComponent {
         time += times.spent_time;
       });
     }
-    return time.toFixed(2);
+    return this.taskservice.convertTaskTimeInHours(time);
   }
   
 

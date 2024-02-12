@@ -28,4 +28,12 @@ export class TaskService {
     return this.http.post(`${this.apiUrl}/tasks`, formData, { headers });
   }
 
+  convertTaskTimeInHours(time: number): string{
+    const hours = Math.floor(time);
+    const remainingMinutes = (time - hours) * 60;
+    const minutes = Math.floor(remainingMinutes);
+
+    return `${hours} h, ${minutes} m`
+  }
+
 }

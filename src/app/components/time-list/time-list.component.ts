@@ -28,8 +28,13 @@ export class TimeListComponent {
     this.route.navigate(['/home']);
   }
 
-  public time2Decimals(time: number):string {
-    return time.toFixed(2);
+  public timeFormatted(time: number):string {
+    return this.taskservice.convertTaskTimeInHours(time);
+  }
+
+  public formatDate(date: string): string{
+    const dateObject = new Date(date);
+    return dateObject.toLocaleString();
   }
 }
 
