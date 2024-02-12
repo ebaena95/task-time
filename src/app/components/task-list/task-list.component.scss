@@ -1,0 +1,17 @@
+.tasks-wrapper{
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 90%;
+}
+.task{
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: rgb(223, 221, 221);
+    padding: 8px;
+}
+
+  

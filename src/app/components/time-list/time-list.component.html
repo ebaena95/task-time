@@ -1,0 +1,24 @@
+
+<button (click)="goTaskList()" class="button">Go task list</button>
+<div class="tasks-wrapper">   
+    <div *ngFor="let task of tasks" class="task">
+      <div>Name: {{ task.name }}</div>
+      <div *ngIf="task.times" >
+        <div class="times" *ngFor="let time of task.times">
+            <div>
+                Description: {{time.description}}
+            </div>
+            <div>
+                Begin Date: {{time.begin_date}}
+            </div>
+            <div>
+                End date: {{time.end_date}}
+            </div>
+            <div>
+                Spend time: {{time2Decimals(time.spent_time)}}
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

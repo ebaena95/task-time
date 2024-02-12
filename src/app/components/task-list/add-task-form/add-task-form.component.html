@@ -1,0 +1,23 @@
+<!-- add-task-form.component.html -->
+
+<form [formGroup]="addTaskForm!" (ngSubmit)="submitForm()">
+    <label for="nom">Name (Required)</label>
+    <input type="text" id="nom" formControlName="name">
+    
+    <br>
+    
+    <label for="customer">Customer (Required)</label>
+    <input type="text" id="customer" formControlName="customer">
+    
+    <br>
+  
+    <label for="description">Description</label>
+    <input type="text" id="description" formControlName="description">
+    
+    <br>
+    
+    <button type="submit" [disabled]="addTaskForm?.invalid">Enviar</button>
+  </form>
+  
+  <button (click)="goList()" class="button">Go task list</button>
+  

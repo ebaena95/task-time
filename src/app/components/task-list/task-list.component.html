@@ -1,0 +1,9 @@
+<div class="tasks-wrapper" >   
+    <div *ngFor="let task of tasks" class="task">
+      <div>Name: {{ task.name }}</div>
+      <div>Description: {{ task.description }}</div>
+      <div>Customer: {{ task.customer }}</div>
+      <div *ngIf="task.times" >Time: {{ getTaskTime(task) + 'h' }}</div>
+    </div>
+  </div>
+  
