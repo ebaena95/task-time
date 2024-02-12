@@ -20,7 +20,7 @@ export class TimeListComponent {
 
   constructor(private route: Router, private taskservice: TaskService) {
     this.taskservice.getTasksExtended().pipe(take(1)).subscribe(tasks=> {
-      this.tasks = tasks;
+      this.tasks =  tasks.filter((task: Task) => task.times);
     })
   }
 
