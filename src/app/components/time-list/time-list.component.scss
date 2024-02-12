@@ -2,8 +2,9 @@
     margin-top: 8px;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     width: 90%;
+    justify-content: center;
 }
 .task{
 
@@ -11,13 +12,16 @@
     flex-direction: column;
     gap: 4px;
     background-color: rgb(223, 221, 221);
-    padding: 8px;
-    height: fit-content;
+    padding: 15px;
+    border-radius: 8px;
+    min-width: 300px;
 
     .times{
         background-color: rgb(194, 190, 190);
         margin: 4px;
         padding: 4px;
+        padding: 15px;
+    border-radius: 8px;
     }
 }
 button {

@@ -6,11 +6,12 @@ import { CommonModule } from '@angular/common';
 import { TaskService } from '../../services/task.service';
 import { Task } from '../../interfaces/task';
 import { take } from 'rxjs';
+import { AddTimeFormComponent } from './add-time-form/add-time-form.component';
 
 @Component({
   selector: 'app-time-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, AddTimeFormComponent],
   templateUrl: './time-list.component.html',
   styleUrl: './time-list.component.scss'
 })
@@ -36,5 +37,6 @@ export class TimeListComponent {
     const dateObject = new Date(date);
     return dateObject.toLocaleString();
   }
+
 }
 

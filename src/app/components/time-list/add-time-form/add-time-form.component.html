@@ -1,0 +1,23 @@
+<!-- add-task-form.component.html -->
+<form *ngIf="visibleForm; else showbutton" [formGroup]="addTimeForm!" (ngSubmit)="submitForm()">
+    <div class="form-input">
+        <label for="description">Description</label>
+        <input type="text" id="description" formControlName="description">  
+    </div>
+    <div class="form-input">
+        <label for="start">Start date:</label>
+        <input type="datetime-local" id="start" formControlName="begin_date"/>
+    </div>
+    <div class="form-input">
+        <label for="start">End date:</label>
+        <input type="datetime-local" id="start" formControlName="end_date"/>
+    </div> 
+    <div class="form-button">
+        <button (click)="toggleFormVisibility()">Close</button>
+        <button (click)="submitForm()" type="submit">Save</button>
+    </div>
+</form>
+<ng-template #showbutton>
+    <button (click)="toggleFormVisibility()">Add Time</button>
+  </ng-template>
+  

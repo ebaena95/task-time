@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Time } from '../interfaces/task';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,11 @@ export class TaskService {
   setTask(formData: any): Observable<any> {
     const headers = this.getHeaders();
     return this.http.post(`${this.apiUrl}/tasks`, formData, { headers });
+  }
+
+  addTime(formData: Time, taskId: string): Observable<any> {
+    const headers = this.getHeaders();
+    return this.http.post(`${this.apiUrl}/tasks/${taskId}/times`, formData, { headers });
   }
 
   convertTaskTimeInHours(time: number): string{
